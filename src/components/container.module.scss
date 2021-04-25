@@ -1,0 +1,42 @@
+.mainContainer {
+    // position: absolute;
+    display: grid;
+    height: auto;
+
+    // background-color: #eaeaead6;
+    grid-template-columns: repeat(12, 1fr);
+    align-self: center;
+    margin-right: 15%;
+    margin-left: 15%;
+}
+
+@mixin grid-column($columnSize) {
+    grid-column: span $columnSize;
+    min-height: 50px;
+    padding: 10px;
+}
+
+$list: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+@each $size in $list {
+    .containerItem#{$size} {
+        @include grid-column($size);
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .mainContainer {
+        margin-right: 1%;
+        margin-left: 1%;
+    }
+    @each $size in $list {
+        .containerItem#{$size} {
+            @include grid-column(12);
+        }
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+}

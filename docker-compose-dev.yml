@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  zsweb:
+    container_name: zsweb
+    image: zsweb
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+    environment:
+      - REACT_APP_BACKEND=$REACT_APP_BACKEND
+    ports:
+      - 3000:3000
+    stdin_open: true
+    volumes:
+      - ./.:/usr/src/app
+      - zsweb-deps:/usr/src/app/node_modules
+      - zsweb-next:/usr/src/app/.next
+
+volumes:
+  zsweb-deps:
+  zsweb-next:

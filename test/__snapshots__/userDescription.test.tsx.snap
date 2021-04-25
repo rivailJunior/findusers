@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Description Component Render Correctly 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="left"
+  >
+    <img
+      alt=""
+      src="https://avatars.githubusercontent.com/u/5783143?v=4"
+    />
+  </div>
+  <div
+    className="right"
+  >
+    <div
+      className="title"
+    >
+      rivail.rj@gmail.com
+    </div>
+    <div
+      className="subTitle"
+    >
+      Full Stack developer, javascript lover and an open source enthusiastic.
+    </div>
+    <div
+      className="subTitle"
+    >
+      Followers: 
+      4
+    </div>
+    <div
+      className="subTitle"
+    >
+      Following: 
+      2
+    </div>
+  </div>
+</div>
+`;

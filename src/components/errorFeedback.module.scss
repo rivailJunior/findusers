@@ -1,0 +1,22 @@
+@use '../pages/index.scss' as index;
+
+@mixin errorLabel($fontSize: 16) {
+    @include index.default-label(14px, 1%, 100%, 500);
+    font-size: $fontSize;
+}
+
+.errorContainer > div {
+    @include errorLabel(20px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 50px;
+    color: white;
+    background-color: lightcoral;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.subTitle {
+    @include errorLabel(14);
+}

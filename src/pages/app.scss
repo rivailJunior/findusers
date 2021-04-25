@@ -1,0 +1,58 @@
+@use './index.scss' as index;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    @include index.default-label(32px, 2%, 80%, 500);
+    margin-bottom: 20px;
+}
+
+h5 {
+    @include index.default-label(15px, 5%, 100%);
+    margin-bottom: 5%;
+}
+
+ul > li {
+    @include index.default-label(13px, 1%, 80%);
+    text-align: left;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .container {
+        width: 80%;
+    }
+
+    h1 {
+        @include index.default-label(18px, 2%, 80%, 700);
+        margin-bottom: 20px;
+    }
+
+    h5 {
+        @include index.default-label(12px, 5%, 100%);
+        margin-bottom: 5%;
+    }
+
+    ul > li {
+        @include index.default-label(10px, 1%, 80%);
+        text-align: left;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+    /* Styles */
+    .container {
+        width: 60%;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+    /* Styles */
+}

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Component Render Correctly 1`] = `
+<div
+  className="errorContainer"
+>
+  <div>
+    Nenhum repositório encontrado!
+  </div>
+</div>
+`;
