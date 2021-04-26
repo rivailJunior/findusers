@@ -1,0 +1,10 @@
+@use '../pages/index.scss' as index;
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+
+    .inputField {
+        height: 50px;
+        @include index.default-label(15px, 0, 100%, 300, 15px, left);
+    }
+}

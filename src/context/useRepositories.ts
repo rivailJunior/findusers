@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { doGetRequest } from '../provider/requestProvider';
+import { getRepositoriesByUserName } from '../provider/requestProvider';
 import { RepositoriesInterface } from './repositoriesInterface';
 import useSession from './useSession';
 
@@ -11,12 +11,11 @@ const useRepositories = (): RepositoriesInterface => {
     const findRepositories = async (userName, token) => {
         try {
             setLoading(true)
-            const { data } = await doGetRequest({ userName, token })
+            const { data } = await getRepositoriesByUserName({ userName, token })
             const sortByBiggest = data.sort((ac, current) => ac.stargazers_count < current.stargazers_count ? 1 : -1)
             setRepositories(sortByBiggest)
             return data
         } catch (err) {
-            console.log('err', err)
             setError(err);
         } finally {
             setLoading(false);

@@ -5,42 +5,58 @@ import { handleRedirect, handleSession } from '../../utils/sessionValidate'
 import useSession from '../../context/useSession'
 import useRepositories from '../../context/useRepositories'
 import { ListRepositories } from '../../components/list'
-import styles from './user.module.scss'
 import { GridContainer, GridContainerItem } from '../../components/gridContainer'
 import { ErrorFeedback } from '../../components/errorFeedback'
 import { Header } from '../../components/header'
 import { UserDescription } from '../../components/userDescription'
 
 const Index = ({ userData, token }): JSX.Element => {
-	const { user, sessionToken, removeSession } = useSession(token, userData)
+	const { user, sessionToken, removeSession, findUser, findError } = useSession(token, userData)
 	const { findRepositories, repositories, repoRequestLoading } = useRepositories();
 
 	useEffect(() => {
+		if (userData) {
+			console.log('entrou aqu')
+			findRepositories(userData?.login, sessionToken)
+		}
+	}, [])
+
+	useEffect(() => {
 		if (user) {
+			console.log('will find repo', user.login, userData.login)
 			findRepositories(user?.login, sessionToken)
 		}
 	}, [user])
 
 	useEffect(() => {
-		console.log('respo', repositories, user)
 	}, [repositories])
+
+	const searchUser = async (userName) => {
+		await findUser(userName)
+	}
 
 	return (
 		<div>
-			<Header userName={user?.name} labelRight="Sair" handleRight={() => removeSession()} />
-			<GridContainer>
-				<GridContainerItem size={12}>
-					<UserDescription userData={userData} />
-				</GridContainerItem>
+			<Header handleSearch={searchUser} userName={user?.name} labelRight="Sair" handleRight={() => removeSession()} />
+			{!findError ? (
+				<>
+					<GridContainer>
+						<GridContainerItem size={12}>
+							<UserDescription userData={user} />
+						</GridContainerItem>
+					</GridContainer>
+					<GridContainer>
+						<GridContainerItem size={12}>
+							<ListRepositories data={repositories} handleClick={(repo) => {
+								console.log('clickei', repo)
+							}} />
+						</GridContainerItem>
+					</GridContainer>
+				</>
+			) : (
+				<ErrorFeedback title="Nenhum novo usuario encontrado" />
+			)}
 
-			</GridContainer>
-			<GridContainer>
-				<GridContainerItem size={12}>
-					<ListRepositories data={repositories} handleClick={(repo) => {
-						console.log('clickei', repo)
-					}} />
-				</GridContainerItem>
-			</GridContainer>
 		</div>
 
 	)

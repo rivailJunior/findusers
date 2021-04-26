@@ -4,10 +4,12 @@ import { useRouter } from 'next/router'
 
 import { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
+import { getNewUser } from '../provider/requestProvider';
 export default function useSession(session: string, userData: User): SessionInterface {
     const [cookie, setCookie, removeCookie] = useCookies(['session'])
     const [sessionToken, setSession] = useState(cookie.token)
     const [user, setUser] = useState(cookie.user);
+    const [findError, setError] = useState(null);
     const router = useRouter()
 
     useEffect(() => {
@@ -25,10 +27,24 @@ export default function useSession(session: string, userData: User): SessionInte
         router.push('/')
     }
 
+    const findUser = async (userName) => {
+        try {
+            const { data } = await getNewUser({ userName, token: sessionToken });
+            setUser(data)
+            setError(null);
+        } catch (err) {
+            setUser({})
+            setError("Nenhum usuário encontrado!")
+        }
+
+    }
+
     return {
         removeSession,
         setSession,
         user,
-        sessionToken
+        sessionToken,
+        findUser,
+        findError
     }
 }

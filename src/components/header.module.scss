@@ -2,6 +2,25 @@
     overflow: hidden;
     background-color: white;
     padding: 10px 10px;
+    display: grid;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .headerLeft {
+        grid-column: span 4;
+    }
+
+    .headerRight {
+        grid-column: span 8;
+
+        div {
+            justify-content: flex-end;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            right: 0;
+        }
+    }
 }
 
 .header a {
@@ -45,4 +64,29 @@
     .header-right {
         float: none;
     }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .header {
+        .headerLeft {
+            grid-column: span 12;
+        }
+
+        .headerRight {
+            grid-column: span 12;
+
+            div {
+                justify-content: flex-end;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                right: 0;
+            }
+        }
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
 }

@@ -1,5 +1,5 @@
 
-import axios, { AxiosResponse } from 'axios'
+import axios from 'axios'
 import { Octokit } from '@octokit/core'
 
 const doPostRequestLogin = async (
@@ -39,7 +39,7 @@ type iGetParams = {
 	token: string
 }
 
-const doGetRequest = async ({
+const getRepositoriesByUserName = async ({
 	userName,
 	token
 }: iGetParams): Promise<any> => {
@@ -49,4 +49,14 @@ const doGetRequest = async ({
 	})
 }
 
-export { doPostRequestLogin, doGetRequest }
+const getNewUser = async ({
+	userName,
+	token
+}: iGetParams): Promise<any> => {
+	const octokit = new Octokit({ auth: token });
+	return await octokit.request('/users/{username}', {
+		username: userName.replace(/ /g, '')
+	})
+}
+
+export { doPostRequestLogin, getRepositoriesByUserName, getNewUser }

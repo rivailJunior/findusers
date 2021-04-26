@@ -9,18 +9,16 @@ const UserDescription = ({ userData }: iDescription): JSX.Element => {
     return (
         <div className={styles.card}>
             <div className={styles.left}>
-                <img src={userData.avatar_url} alt="" />
+                <img src={userData?.avatar_url} alt="" />
             </div>
             <div className={styles.right}>
-                <div className={styles.title}>{userData.email}</div>
-                <div className={styles.subTitle}>{userData.bio}</div>
-                <div className={styles.subTitle}>Followers: {userData.followers}</div>
-                <div className={styles.subTitle}>Following: {userData.following}</div>
+                <div className={styles.title}>{userData?.email}</div>
+                <div className={styles.subTitle}>{userData?.bio}</div>
+                <div className={styles.subTitle}>Followers: {userData?.followers}</div>
+                <div className={styles.subTitle}>Following: {userData?.following}</div>
             </div>
         </div>
     );
 }
 
 export { UserDescription };
-// número de seguidores, número de seguidos, imagem do
-// avatar, e-mail e bio

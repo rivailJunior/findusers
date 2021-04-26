@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput Component Render Correctly 1`] = `
+<div
+  className="inputContainer"
+>
+  <input
+    className="inputField"
+    data-testid="searchInput"
+    name=""
+    onChange={[Function]}
+    placeholder="Search"
+    type="text"
+  />
+  <button
+    disabled={true}
+    onClick={[Function]}
+  >
+    OK
+  </button>
+</div>
+`;

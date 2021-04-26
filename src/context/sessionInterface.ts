@@ -3,5 +3,7 @@ export interface SessionInterface {
     sessionToken: string,
     setSession?: Function,
     removeSession: Function,
-    user?: User
+    user?: User,
+    findUser(userName: string): Promise<User | any>,
+    findError?: string
 }

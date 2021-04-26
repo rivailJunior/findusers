@@ -4,21 +4,49 @@ exports[`Header Component Render Correctly 1`] = `
 <div
   className="header"
 >
-  <a
-    className="logo"
-    href="#default"
-  >
-    Rivail Junior
-  </a>
   <div
-    className="header-right"
+    className="headerLeft"
   >
     <a
-      className="active"
-      onClick={[MockFunction]}
+      className="logo"
+      href="#default"
     >
-      Sair
+      Rivail Junior
     </a>
+  </div>
+  <div
+    className="headerRight"
+  >
+    <div>
+      <div
+        className="inputContainer"
+      >
+        <input
+          className="inputField"
+          data-testid="searchInput"
+          name=""
+          onChange={[Function]}
+          placeholder="Buscar Usuario"
+          type="text"
+        />
+        <button
+          disabled={true}
+          onClick={[Function]}
+        >
+          OK
+        </button>
+      </div>
+      <div
+        className="header-right"
+      >
+        <a
+          className="active"
+          onClick={[MockFunction]}
+        >
+          Sair
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 `;
