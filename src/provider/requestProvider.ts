@@ -12,7 +12,7 @@ const doPostRequestLogin = async (
 			const { data } = await axios.post('https://github.com/login/oauth/access_token', {
 				client_id: process.env.CLIENT_ID,
 				client_secret: process.env.CLIENT_SECRET,
-				redirect_uri: 'http://localhost:3000/user',
+				redirect_uri: `${ process.env.REACT_APP_CALLBACKURL }/user`,
 				state: 'findusers',
 				code
 			}, {
