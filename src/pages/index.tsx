@@ -3,6 +3,12 @@ import { GetServerSideProps } from 'next'
 import { handleRedirect, handleSession } from '../utils/sessionValidate'
 
 const Index = () => {
+
+	const client_id = process.env.REACT_APP_CLIENTID;
+	const state = process.env.REACT_APP_STATE;
+	const callbackURL = process.env.REACT_APP_CALLBACKURL;
+	const url = `https://github.com/login/oauth/authorize?client_id=${ client_id }&redirect_uri:${ callbackURL }&state=${ state }&allow_singnup=true`
+
 	return (
 		<div className="container">
 			<h1>Olá Avaliador!</h1>
@@ -19,7 +25,7 @@ const Index = () => {
 				</li>
 			</ul>
 			<a
-				href="https://github.com/login/oauth/authorize?client_id=4ef14be8aa943c3e53e2&redirect_uri:http://localhost:3000&state=findusers&allow_singnup=true"
+				href={url}
 				type="button"
 				className="btn"
 			>
