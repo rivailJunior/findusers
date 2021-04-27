@@ -1,6 +1,6 @@
 export interface RepositoriesInterface {
     findRepositories(userName: string): Promise<any>,
-    repositories: Object[],
+    repositories: any[],
     error: any,
     repoRequestLoading: boolean,
     getRepositoryByName(userName: string, repositoryName: string): Promise<any>,

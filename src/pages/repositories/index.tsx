@@ -14,11 +14,7 @@ import moment from 'moment'
 import styles from './index.module.scss';
 import { bread404Titles, breadCrumbTitlesRepository } from '../../utils/breadCrumbTitles'
 
-type IRepo = {
-    repository?: any,
-}
-
-const Index = (props: IRepo): JSX.Element => {
+const Index = (): JSX.Element => {
     const router = useRouter()
     const { user, removeSession } = useSession()
     const { getRepositoryByName, repository } = useRepositories()

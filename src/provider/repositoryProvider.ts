@@ -1,4 +1,3 @@
-import axios from 'axios'
 import { Octokit } from '@octokit/core'
 type iGetParams = {
     userName?: string,
