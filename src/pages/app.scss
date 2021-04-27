@@ -1,10 +1,11 @@
 @use './index.scss' as index;
+@use './root.scss' as root;
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 h1 {

@@ -1,0 +1,35 @@
+@use '../pages/index.scss' as index;
+@use '../pages//root.scss' as root;
+.breadContainer {
+    display: flex;
+    flex-direction: row;
+
+    .bLabel {
+        @include index.default-label(18px, 2%, none, 100, 30px, left);
+        text-decoration: underline;
+        color: root.$color;
+        margin: 1px;
+        margin-right: 5px;
+        color: root.$color;
+        cursor: pointer;
+    }
+
+    .active {
+        color: blue;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .breadContainer {
+        .bLabel {
+            @include index.default-label(13px, none, none, 100, 15px, left);
+
+            margin-right: 2px;
+            color: root.$color;
+        }
+        .active {
+            color: blue;
+        }
+    }
+}

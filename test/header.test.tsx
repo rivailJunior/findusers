@@ -22,4 +22,10 @@ describe('Header Component', () => {
     })
 
 
+    test('Hide Search field', () => {
+        render(<Header userName="Rivail Junior" labelRight="Sair" />)
+        expect(screen.queryByText('Buscar Usuario')).not.toBeInTheDocument()
+    })
+
+
 })

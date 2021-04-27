@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadCrumb Render Correctly 1`] = `
+<div
+  className="breadContainer"
+>
+  <div
+    className="bLabel active"
+    data-testid="labelBread"
+    onClick={[MockFunction]}
+  >
+    Descrição usuário/
+  </div>
+  <div
+    className="bLabel"
+    data-testid="labelBread"
+    onClick={[Function]}
+  >
+    Detalhes repositório/
+  </div>
+</div>
+`;

@@ -9,7 +9,7 @@ exports[`Header Component Render Correctly 1`] = `
   >
     <a
       className="logo"
-      href="#default"
+      href="/"
     >
       Rivail Junior
     </a>
@@ -18,24 +18,6 @@ exports[`Header Component Render Correctly 1`] = `
     className="headerRight"
   >
     <div>
-      <div
-        className="inputContainer"
-      >
-        <input
-          className="inputField"
-          data-testid="searchInput"
-          name=""
-          onChange={[Function]}
-          placeholder="Buscar Usuario"
-          type="text"
-        />
-        <button
-          disabled={true}
-          onClick={[Function]}
-        >
-          OK
-        </button>
-      </div>
       <div
         className="header-right"
       >

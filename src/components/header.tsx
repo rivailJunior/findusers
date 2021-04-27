@@ -13,11 +13,12 @@ const Header = ({ userName, labelRight, handleRight, handleSearch }: iHeader): J
     return (
         <div className={styles.header}>
             <div className={styles.headerLeft}>
-                <a href="#default" className={styles.logo}>{userName}</a>
+                <a href="/" className={styles.logo}>{userName}</a>
             </div>
             <div className={styles.headerRight}>
                 <div>
-                    <SearchInput handleSearch={handleSearch} placeholder="Buscar Usuario" />
+                    {handleSearch && <SearchInput handleSearch={handleSearch} placeholder="Buscar Usuario" />}
+
                     {labelRight && (
                         <div className={styles['header-right']}>
                             <a className={styles.active} onClick={handleRight} >Sair</a>
@@ -32,3 +33,4 @@ const Header = ({ userName, labelRight, handleRight, handleSearch }: iHeader): J
 }
 
 export { Header };
+export default Header;

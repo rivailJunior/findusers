@@ -20,7 +20,7 @@ exports[`Index Page Snapshot 1`] = `
   </ul>
   <a
     className="btn"
-    href="https://github.com/login/oauth/authorize?client_id=4ef14be8aa943c3e53e2&redirect_uri:http://localhost:3000&state=findusers&allow_singnup=true"
+    href="https://github.com/login/oauth/authorize?client_id=undefined&redirect_uri:undefined&state=undefined&allow_singnup=true"
     type="button"
   >
     Login with Git

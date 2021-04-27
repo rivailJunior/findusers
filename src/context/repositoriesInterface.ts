@@ -1,7 +1,8 @@
-import { User } from './../model/user';
 export interface RepositoriesInterface {
-    findRepositories(userName: string, token: string): Promise<any>,
+    findRepositories(userName: string): Promise<any>,
     repositories: Object[],
     error: any,
-    repoRequestLoading: boolean
+    repoRequestLoading: boolean,
+    getRepositoryByName(userName: string, repositoryName: string): Promise<any>,
+    repository: Object
 }

@@ -13,6 +13,7 @@ exports[`SearchInput Component Render Correctly 1`] = `
     type="text"
   />
   <button
+    className="disabled"
     disabled={true}
     onClick={[Function]}
   >

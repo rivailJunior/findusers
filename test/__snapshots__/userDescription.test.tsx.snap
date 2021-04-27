@@ -8,7 +8,7 @@ exports[`User Description Component Render Correctly 1`] = `
     className="left"
   >
     <img
-      alt=""
+      alt="Imagem do usuário"
       src="https://avatars.githubusercontent.com/u/5783143?v=4"
     />
   </div>
@@ -28,13 +28,13 @@ exports[`User Description Component Render Correctly 1`] = `
     <div
       className="subTitle"
     >
-      Followers: 
+      Seguidores: 
       4
     </div>
     <div
       className="subTitle"
     >
-      Following: 
+      Seguindo: 
       2
     </div>
   </div>

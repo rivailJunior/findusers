@@ -18,7 +18,7 @@ const SearchInput = ({ handleSearch, placeholder }: iSearch) => {
     return (
         <div className={styles.inputContainer}>
             <input className={styles.inputField} onChange={handleChangeName} type="text" name="" data-testid="searchInput" placeholder={placeholder} />
-            <button disabled={!name.length} onClick={search}>OK</button>
+            <button disabled={!name.length} className={!name.length ? styles.disabled : ''} onClick={search}>OK</button>
         </div>
     );
 }

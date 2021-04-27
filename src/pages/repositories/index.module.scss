@@ -1,0 +1,11 @@
+@use '../../pages/index.scss' as index;
+
+.informationsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    span {
+        @include index.default-label();
+    }
+}

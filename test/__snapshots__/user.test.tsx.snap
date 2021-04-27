@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Index User Page Render correctly 1`] = `
+<div>
+  <div>
+    <div>
+      Rivail Santos
+    </div>
+    <button
+      onClick={[Function]}
+    >
+      Sair
+    </button>
+  </div>
+  <div
+    className="mainContainer"
+    data-testid="gridContainer"
+  >
+    <div
+      className="containerItem12"
+      data-testid="gridContainerItem"
+    >
+      <div
+        className="breadContainer"
+      >
+        <div
+          className="bLabel active"
+          data-testid="labelBread"
+          onClick={[Function]}
+        >
+          Descrição usuário/
+        </div>
+      </div>
+    </div>
+    <div
+      className="containerItem12"
+      data-testid="gridContainerItem"
+    >
+      <div
+        className="card"
+      >
+        <div
+          className="left"
+        >
+          <img
+            alt="Imagem do usuário"
+            src="https://avatars.githubusercontent.com/u/5783143?v=4"
+          />
+        </div>
+        <div
+          className="right"
+        >
+          <div
+            className="title"
+          >
+            rivail.rj@gmail.com
+          </div>
+          <div
+            className="subTitle"
+          >
+            Full Stack developer, javascript lover and an open source enthusiastic.
+          </div>
+          <div
+            className="subTitle"
+          >
+            Seguidores: 
+            4
+          </div>
+          <div
+            className="subTitle"
+          >
+            Seguindo: 
+            2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="mainContainer"
+    data-testid="gridContainer"
+  >
+    <div
+      className="containerItem12"
+      data-testid="gridContainerItem"
+    >
+      <div
+        className="errorContainer"
+      >
+        <div>
+          Nada encontrado
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -39,7 +39,7 @@
             text-transform: lowercase;
         }
         .subTitle {
-            @include index.default-label(20px, 1%, 100%, 100, 15px, left);
+            @include index.default-label(17px, 1%, 100%, 100, 15px, left);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -62,7 +62,7 @@
                 text-transform: lowercase;
             }
             .subTitle {
-                @include index.default-label(10px, 1%, 100%, 100, 15px, left);
+                @include index.default-label(13px, 1%, 100%, 200, 15px, left);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;

@@ -6,5 +6,31 @@
     .inputField {
         height: 50px;
         @include index.default-label(15px, 0, 100%, 300, 15px, left);
+        border-radius: 5px;
+        // border: none;
+        border: thin solid #bec7d0;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .inputField:focus {
+        border: dodgerblue;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    button {
+        background-color: dodgerblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .disabled {
+        background-color: #bec7d0;
     }
 }

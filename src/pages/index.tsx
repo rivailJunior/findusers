@@ -37,8 +37,7 @@ const Index = () => {
 
 export const getServerSideProps: GetServerSideProps = async ({
 	req,
-	res,
-	query
+	res
 }) => {
 	const accessToken = handleSession(req, res)
 	if (accessToken) {
