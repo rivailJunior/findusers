@@ -3,7 +3,7 @@ import { unmountComponentAtNode } from "react-dom";
 import { fireEvent, render, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
-import { InformationCard } from '../src/components/informationCard';
+import { InformationCard } from '../src/components/informationCard/informationCard';
 
 
 let container = null;

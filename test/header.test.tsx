@@ -2,7 +2,7 @@ import React from 'react'
 import { render, cleanup, screen, fireEvent } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
-import { Header } from '../src/components/header'
+import { Header } from '../src/components/header/header'
 
 afterEach(cleanup)
 

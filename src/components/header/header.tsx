@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './header.module.scss'
-import { SearchInput } from './searchInput';
+import { SearchInput } from '../searchInput/searchInput';
 
 type iHeader = {
     userName?: string,

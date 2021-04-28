@@ -2,8 +2,8 @@ import React from 'react'
 import { render, cleanup, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
-import { ErrorFeedback } from '../src/components/errorFeedback'
-import { GridContainer, GridContainerItem } from '../src/components/gridContainer'
+import { ErrorFeedback } from '../src/components/errorFeedback/errorFeedback'
+import { GridContainer, GridContainerItem } from '../src/components/gridContainer/gridContainer'
 
 afterEach(cleanup)
 

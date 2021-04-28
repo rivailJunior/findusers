@@ -1,18 +1,20 @@
+'strict'
 import React, { useEffect } from 'react'
 import { GetServerSideProps } from 'next'
 import { handleRedirect, handleSession } from '../../utils/sessionValidate'
 import useSession from '../../context/useSession'
 import useRepositories from '../../context/useRepositories'
-import { GridContainer, GridContainerItem } from '../../components/gridContainer'
-import { ErrorFeedback } from '../../components/errorFeedback'
-import Header from '../../components/header'
-import { UserDescription } from '../../components/userDescription'
+import { GridContainer, GridContainerItem } from '../../components/gridContainer/gridContainer'
+import { ErrorFeedback } from '../../components/errorFeedback/errorFeedback'
+import Header from '../../components/header/header'
+import { UserDescription } from '../../components/userDescription/userDescription'
 import { useRouter } from 'next/router'
-import { InformationCard } from '../../components/informationCard'
-import BreadCrumb from '../../components/breadCrumb'
+import { InformationCard } from '../../components/informationCard/informationCard'
+import BreadCrumb from '../../components/breadcrumb/breadCrumb'
 import moment from 'moment'
 import styles from './index.module.scss';
 import { bread404Titles, breadCrumbTitlesRepository } from '../../utils/breadCrumbTitles'
+import { validateSession } from '../../utils/validateUserWithNoSession'
 
 const Index = (): JSX.Element => {
     const router = useRouter()
@@ -34,7 +36,7 @@ const Index = (): JSX.Element => {
     return (
         <div>
             <Header userName={user?.name} labelRight="Sair" handleRight={() => removeSession()} />
-            {!router.query?.repository ? (
+            {!router.query?.repository && !repository?.id ? (
                 <GridContainer>
                     <GridContainerItem size={12}>
                         <BreadCrumb titles={bread404} />
@@ -82,19 +84,6 @@ export const getServerSideProps: GetServerSideProps = async ({
     req,
     res,
 }) => {
-    try {
-        const accessToken = handleSession(req, res);
-        if (!accessToken) handleRedirect(req, res);
-        return {
-            props: {}
-        }
-    } catch (err) {
-        if (err === 'bad_verification_code' || err?.response?.status === 401) {
-            handleRedirect(req, res)
-        }
-        return {
-            props: {}
-        }
-    }
+    return await validateSession(req, res)
 }
 export default Index

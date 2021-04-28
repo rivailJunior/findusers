@@ -1,5 +1,5 @@
 import React from 'react';
-import { User } from '../model/user';
+import { User } from '../../model/user';
 import styles from './userDescription.module.scss'
 
 type iDescription = {

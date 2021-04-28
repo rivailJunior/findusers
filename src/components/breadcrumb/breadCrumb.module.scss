@@ -1,5 +1,5 @@
-@use '../pages/index.scss' as index;
-@use '../pages//root.scss' as root;
+@use '../../pages/index.scss' as index;
+@use '../../pages/root.scss' as root;
 .breadContainer {
     display: flex;
     flex-direction: row;

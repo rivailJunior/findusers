@@ -19,7 +19,7 @@ export type Repository = {
     disabled: boolean
     downloads_url: string
     events_url: string
-    fork: number
+    fork: boolean
     forks: number
     forks_count: number
     forks_url: string
@@ -55,8 +55,8 @@ export type Repository = {
     open_issues: number
     open_issues_count: number
     owner: User
-    permissions: Object
-    private: false
+    permissions: { admin: boolean, push: boolean, pull: boolean }
+    private: boolean
     pulls_url: string
     pushed_at: string
     releases_url: string

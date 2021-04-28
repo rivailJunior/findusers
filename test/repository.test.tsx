@@ -8,23 +8,19 @@ import * as nextRouter from 'next/router';
 
 nextRouter.useRouter = jest.fn();
 
-nextRouter.useRouter.mockImplementation(() => ({ route: '/respositories', query: { repository: 'moveon' } }));
-
 let container = null;
 beforeEach(() => {
-    // configurar o elemento do DOM como o alvo da renderização
     container = document.createElement("div");
     document.body.appendChild(container);
 });
 
 afterEach(() => {
-    // limpar na saída
     unmountComponentAtNode(container);
     container.remove();
     container = null;
 });
 
-jest.mock("../src/components/header", () => {
+jest.mock("../src/components/header/header", () => {
     return function Header() {
         return (
             <div>
@@ -35,7 +31,9 @@ jest.mock("../src/components/header", () => {
     }
 })
 
-jest.mock('../src/components/breadCrumb', () => {
+
+jest.mock('../src/components/breadcrumb/breadCrumb', () => {
+
     return function BreadCrumb() {
         return (
             <div>
@@ -109,14 +107,17 @@ jest.mock('../src/context/useRepositories', () => {
 });
 
 describe('Index Repository Page', () => {
+
+    nextRouter.useRouter.mockImplementation(() => ({ route: '/respositories', query: { repository: 'moveon' } }));
+
     test('Render correctly', () => {
         const container = renderer.create(<Index />)
         container.toJSON()
-
         expect(container).toMatchSnapshot()
     })
 
     test('Show all components in page', () => {
+        nextRouter.useRouter.mockImplementation(() => ({ route: '/respositories', query: { repository: 'moveon' } }));
         render(<Index />, container);
         expect(screen.getByText(/sair/i)).toBeInTheDocument();
         expect(screen.getByText(/Descricao usuario/)).toBeInTheDocument();
@@ -125,18 +126,19 @@ describe('Index Repository Page', () => {
         const gridItem = screen.getAllByTestId('gridContainerItem');
         expect(gridContianer).toHaveLength(1)
         fireEvent.click(screen.getByText(/sair/i));
+        expect(gridItem).toHaveLength(6)
+        expect(screen.queryByText(/language/i)).toBeInTheDocument()
+        expect(screen.queryByText(/estrelas/i)).toBeInTheDocument()
+        expect(screen.queryByText(/Descrição/i)).toBeInTheDocument()
+        expect(screen.queryByText(/você precisa selecionar um repositório/i)).not.toBeInTheDocument()
 
     })
 
-    test('Show all components in page', () => {
-        render(<Index repository={[]} />, container);
-        expect(screen.getByText(/sair/i)).toBeInTheDocument();
-        expect(screen.getByText(/Descricao usuario/)).toBeInTheDocument();
-        expect(screen.getByText(/Rivail Santos/)).toBeInTheDocument();
-        const gridContianer = screen.getAllByTestId('gridContainer');
-        const gridItem = screen.getAllByTestId('gridContainerItem');
-        expect(gridContianer).toHaveLength(1)
-        fireEvent.click(screen.getByText(/sair/i));
+    test('Show Feedback when dont choose repository', () => {
+        nextRouter.useRouter.mockImplementation(() => ({ route: '/respositories', query: null }));
+        render(<Index />, container);
+        expect(screen.queryByText(/você precisa selecionar um repositório/i)).toBeInTheDocument()
 
     })
+
 })

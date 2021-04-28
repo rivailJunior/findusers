@@ -1,5 +1,5 @@
 import React from 'react'
-import { getByTestId, render, screen, act, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import { unmountComponentAtNode } from "react-dom";
@@ -20,7 +20,7 @@ afterEach(() => {
     container = null;
 });
 
-jest.mock("../src/components/header", () => {
+jest.mock("../src/components/header/header", () => {
     return function Header({ handleRight }) {
         return (
             <div>

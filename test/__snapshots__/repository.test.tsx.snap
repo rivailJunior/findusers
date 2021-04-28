@@ -119,7 +119,9 @@ exports[`Index Repository Page Render correctly 1`] = `
         <p>
           Estrelas
         </p>
-        <h2 />
+        <h2>
+          undefined
+        </h2>
       </div>
     </div>
     <div

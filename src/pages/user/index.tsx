@@ -4,14 +4,15 @@ import { doPostRequestLogin } from '../../provider/requestProvider'
 import { handleRedirect, handleSession } from '../../utils/sessionValidate'
 import useSession from '../../context/useSession'
 import useRepositories from '../../context/useRepositories'
-import { ListRepositories } from '../../components/list'
-import { GridContainer, GridContainerItem } from '../../components/gridContainer'
-import { ErrorFeedback } from '../../components/errorFeedback'
-import Header from '../../components/header'
-import { UserDescription } from '../../components/userDescription'
+import { ListRepositories } from '../../components/list/list'
+import { GridContainer, GridContainerItem } from '../../components/gridContainer/gridContainer'
+import { ErrorFeedback } from '../../components/errorFeedback/errorFeedback'
+import Header from '../../components/header/header'
+import { UserDescription } from '../../components/userDescription/userDescription'
 import { useRouter } from 'next/router'
-import BreadCrumb from '../../components/breadCrumb';
+import BreadCrumb from '../../components/breadcrumb/breadCrumb';
 import { breadCrumbTitles } from '../../utils/breadCrumbTitles'
+import { handleError } from '../../utils/validateUserWithNoSession'
 
 
 const Index = ({ userData, token }): JSX.Element => {
@@ -90,12 +91,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 			}
 		}
 	} catch (err) {
-		if (err === 'bad_verification_code' || err?.response?.status === 401) {
-			handleRedirect(req, res)
-		}
-		return {
-			props: {}
-		}
+		return handleError(err, req, res)
 	}
 }
 export default Index

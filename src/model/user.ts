@@ -1,4 +1,4 @@
-export const UserValue = {
+export const UserValue: User = {
     avatar_url: "https://avatars.githubusercontent.com/u/5783143?v=4",
     bio: "Full Stack developer, javascript lover and an open source enthusiastic.",
     blog: "",

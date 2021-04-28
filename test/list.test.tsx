@@ -2,7 +2,7 @@ import React from 'react'
 import { render, cleanup, screen, fireEvent } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
-import { ListRepositories } from '../src/components/list'
+import { ListRepositories } from '../src/components/list/list'
 
 afterEach(cleanup)
 

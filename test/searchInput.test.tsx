@@ -2,7 +2,7 @@ import React from 'react'
 import { render, cleanup, screen, fireEvent } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
-import { SearchInput } from '../src/components/searchInput'
+import { SearchInput } from '../src/components/searchInput/searchInput'
 
 afterEach(cleanup)
 const fakeFn = jest.fn()

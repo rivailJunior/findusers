@@ -1,5 +1,5 @@
 import React from 'react';
-import { ErrorFeedback } from './errorFeedback';
+import { ErrorFeedback } from '../errorFeedback/errorFeedback';
 import styles from './list.module.scss';
 import moment from 'moment'
 

@@ -1,3 +1,4 @@
+import { Repository } from './../model/repository';
 import { Octokit } from '@octokit/core'
 type iGetParams = {
     userName?: string,

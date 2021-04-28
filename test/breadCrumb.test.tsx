@@ -3,7 +3,7 @@ import { unmountComponentAtNode } from "react-dom";
 import { fireEvent, render, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
-import { BreadCrumb } from '../src/components/breadCrumb'
+import { BreadCrumb } from '../src/components/breadcrumb/breadCrumb'
 
 let container = null;
 beforeEach(() => {

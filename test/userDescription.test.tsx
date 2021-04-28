@@ -3,7 +3,7 @@ import { unmountComponentAtNode } from "react-dom";
 import { render, cleanup, screen } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
-import { UserDescription } from '../src/components/userDescription'
+import { UserDescription } from '../src/components/userDescription/userDescription'
 import { UserValue } from '../src/model/user'
 
 let container = null;

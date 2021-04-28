@@ -1,3 +1,4 @@
+import { Repository, repositoryMockValue } from './../model/repository';
 import React, { useState } from 'react';
 import { getRepositoriesByUserName, getRepository } from '../provider/requestProvider';
 import { RepositoriesInterface } from './repositoriesInterface';
@@ -8,7 +9,7 @@ const useRepositories = (): RepositoriesInterface => {
     const [repositories, setRepositories] = useState([]);
     const [error, setError] = useState(null)
     const [repoRequestLoading, setLoading] = useState(false)
-    const [repository, setRepository] = useState({})
+    const [repository, setRepository] = useState<Repository | any>(repositoryMockValue)
 
     const findRepositories = async (userName) => {
         try {
@@ -29,7 +30,6 @@ const useRepositories = (): RepositoriesInterface => {
             setLoading(true);
             const { data } = await getRepository({ userLogin, repositoryName, token: sessionToken });
             setRepository(data)
-            console.log('data', data)
             return data;
         } catch (err) {
             console.log('error on get repository', err);

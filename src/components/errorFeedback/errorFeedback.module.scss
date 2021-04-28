@@ -1,4 +1,4 @@
-@use '../pages/index.scss' as index;
+@use '../../pages/index.scss' as index;
 
 @mixin errorLabel($fontSize: 16) {
     @include index.default-label(14px, 1%, 100%, 500);
