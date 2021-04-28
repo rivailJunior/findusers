@@ -16,7 +16,7 @@ import { validateSession } from '../../utils/validateUserWithNoSession'
 
 const Index = (): JSX.Element => {
     const router = useRouter()
-    const { user, removeSession } = useSession()
+    const { user, removeSession, loggedUser } = useSession()
     const { getRepositoryByName, repository } = useRepositories()
     const breadCrumb = breadCrumbTitlesRepository;
     breadCrumb[0].onClick = () => router.push('/user')
@@ -30,7 +30,7 @@ const Index = (): JSX.Element => {
 
     return (
         <div>
-            <Header userName={user?.login} labelRight="Sair" handleRight={() => removeSession()} />
+            <Header userName={loggedUser?.name} labelRight="Sair" handleRight={() => removeSession()} />
             {!router.query?.repository && !repository?.id ? (
                 <GridContainer>
                     <GridContainerItem size={12}>

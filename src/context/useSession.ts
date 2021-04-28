@@ -8,6 +8,7 @@ import { getNewUser } from '../provider/requestProvider';
 export default function useSession(session?: string, userData?: User): SessionInterface {
     const [cookie, setCookie, removeCookie] = useCookies(['session'])
     const [sessionToken, setSession] = useState(cookie.token)
+    const [loggedUser, setloggedUser] = useState(cookie.loggedUser);
     const [user, setUser] = useState(cookie.user);
     const [findError, setError] = useState(null);
     const router = useRouter()
@@ -17,6 +18,10 @@ export default function useSession(session?: string, userData?: User): SessionIn
             setCookie('token', JSON.stringify(session))
             setCookie('user', JSON.stringify(userData))
             setUser(userData)
+        }
+        if (session && userData) {
+            setCookie('loggedUser', JSON.stringify(userData))
+            setloggedUser(userData)
         }
     }, []);
 
@@ -51,6 +56,7 @@ export default function useSession(session?: string, userData?: User): SessionIn
         sessionToken,
         findUser,
         findError,
-        setUser
+        setUser,
+        loggedUser
     }
 }

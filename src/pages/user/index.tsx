@@ -17,7 +17,7 @@ import { handleError } from '../../utils/validateUserWithNoSession'
 
 const Index = ({ userData, token }): JSX.Element => {
 	const router = useRouter()
-	const { user, removeSession, findUser, findError } = useSession(token, userData)
+	const { user, removeSession, findUser, findError, loggedUser } = useSession(token, userData)
 	const { findRepositories, repositories } = useRepositories();
 
 	useEffect(() => {
@@ -50,7 +50,7 @@ const Index = ({ userData, token }): JSX.Element => {
 
 	return (
 		<div>
-			<Header handleSearch={searchUser} userName={user?.name} labelRight="Sair" handleRight={() => removeSession()} />
+			<Header handleSearch={searchUser} userName={loggedUser?.name} labelRight="Sair" handleRight={() => removeSession()} />
 			{!findError ? (
 				<>
 					<GridContainer>
