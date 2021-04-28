@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, cleanup, screen, fireEvent, act } from '@testing-library/react'
+import { render, screen, fireEvent, act } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import { ListRepositories } from '../src/components/list/list'

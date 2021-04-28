@@ -73,14 +73,14 @@ const Index = (): JSX.Element => {
                     </GridContainerItem>
 
 
-                    <GridContainerItem size={4}>
+                    <GridContainerItem size={6}>
                         <InformationCard title="Language" mainText={repository?.language} />
                     </GridContainerItem>
-                    <GridContainerItem size={4}>
+                    <GridContainerItem size={6}>
                         <InformationCard title="Estrelas" mainText={`${ repository?.stargazers_count }`} />
                     </GridContainerItem>
-                    <GridContainerItem size={4}>
-                        <InformationCard title="Descrição" mainText={repository?.description} />
+                    <GridContainerItem size={12}>
+                        <InformationCard title="Descrição" isDescription mainText={repository?.description} />
                     </GridContainerItem>
                 </GridContainer >
             )}
