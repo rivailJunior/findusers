@@ -4,8 +4,15 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
 
     span {
         @include index.default-label();
+        .informations {
+            font-style: italic;
+            font-weight: 300;
+        }
     }
 }

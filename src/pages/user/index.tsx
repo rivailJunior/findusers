@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { GetServerSideProps } from 'next'
 import { doPostRequestLogin } from '../../provider/requestProvider'
-import { handleRedirect, handleSession } from '../../utils/sessionValidate'
+import { handleSession } from '../../utils/sessionValidate'
 import useSession from '../../context/useSession'
 import useRepositories from '../../context/useRepositories'
 import { ListRepositories } from '../../components/list/list'
@@ -42,7 +42,8 @@ const Index = ({ userData, token }): JSX.Element => {
 		router.push({
 			pathname: '/repositories',
 			query: {
-				repository: repository.name
+				repository: repository.name,
+				owner: user.login
 			}
 		})
 	}
@@ -67,7 +68,12 @@ const Index = ({ userData, token }): JSX.Element => {
 					</GridContainer>
 				</>
 			) : (
-				<ErrorFeedback title="Nenhum novo usuario encontrado" />
+				<GridContainer>
+					<GridContainerItem size={12}>
+						<ErrorFeedback title="Nenhum novo usuario encontrado" />
+					</GridContainerItem>
+				</GridContainer>
+
 			)}
 
 		</div>

@@ -1,7 +1,5 @@
-'strict'
 import React, { useEffect } from 'react'
 import { GetServerSideProps } from 'next'
-import { handleRedirect, handleSession } from '../../utils/sessionValidate'
 import useSession from '../../context/useSession'
 import useRepositories from '../../context/useRepositories'
 import { GridContainer, GridContainerItem } from '../../components/gridContainer/gridContainer'
@@ -24,18 +22,15 @@ const Index = (): JSX.Element => {
     breadCrumb[0].onClick = () => router.push('/user')
     const bread404 = bread404Titles;
     useEffect(() => {
-        if (router.query?.repository) {
+        if (router.query?.repository && router.query?.owner) {
             const repoName: string | any = router.query?.repository;
             getRepositoryByName(user.login, repoName)
         }
     }, []);
 
-    useEffect(() => {
-    }, [repository])
-
     return (
         <div>
-            <Header userName={user?.name} labelRight="Sair" handleRight={() => removeSession()} />
+            <Header userName={user?.login} labelRight="Sair" handleRight={() => removeSession()} />
             {!router.query?.repository && !repository?.id ? (
                 <GridContainer>
                     <GridContainerItem size={12}>
@@ -55,12 +50,25 @@ const Index = (): JSX.Element => {
                         <UserDescription userData={user} />
                     </GridContainerItem>
 
-                    <GridContainerItem size={12}>
+                    <GridContainerItem size={3}>
                         <div className={styles.informationsDiv}>
-                            <span>Repositório: <a target="_blank" href={repository?.html_url}>{repository?.name}</a></span>
-                            <span>Branch: {repository?.default_branch}</span>
-                            <span>Publ.: {moment(repository?.created_at).format('DD/MM/YYYY')}</span>
-                            <span>Atualização: {moment(repository?.updated_at).format('DD/MM/YYYY')}</span>
+                            <span>Repositório: <a target="_blank" style={{ fontStyle: 'italic' }} href={repository?.html_url}>{repository?.name}</a></span>
+                        </div>
+                    </GridContainerItem>
+                    <GridContainerItem size={3}>
+                        <div className={styles.informationsDiv}>
+                            <span>Branch: <span className={styles.informations}>{repository?.default_branch} </span></span>
+                        </div>
+                    </GridContainerItem>
+                    <GridContainerItem size={3}>
+                        <div className={styles.informationsDiv}>
+                            <span>Publ.: <span className={styles.informations}>{moment(repository?.created_at).format('DD/MM/YYYY')}</span></span>
+
+                        </div>
+                    </GridContainerItem>
+                    <GridContainerItem size={3}>
+                        <div className={styles.informationsDiv}>
+                            <span>Atuali.: {moment(repository?.updated_at).format('DD/MM/YYYY')}</span>
                         </div>
                     </GridContainerItem>
 

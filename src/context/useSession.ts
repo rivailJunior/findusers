@@ -20,6 +20,10 @@ export default function useSession(session?: string, userData?: User): SessionIn
         }
     }, []);
 
+    useEffect(() => {
+        setCookie('user', JSON.stringify(user))
+    }, [user])
+
     const removeSession = () => {
         setSession('')
         removeCookie('token')
@@ -46,6 +50,7 @@ export default function useSession(session?: string, userData?: User): SessionIn
         user,
         sessionToken,
         findUser,
-        findError
+        findError,
+        setUser
     }
 }

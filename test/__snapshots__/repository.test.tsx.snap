@@ -71,7 +71,7 @@ exports[`Index Repository Page Render correctly 1`] = `
       </div>
     </div>
     <div
-      className="containerItem12"
+      className="containerItem3"
       data-testid="gridContainerItem"
     >
       <div
@@ -80,18 +80,59 @@ exports[`Index Repository Page Render correctly 1`] = `
         <span>
           Repositório: 
           <a
+            style={
+              Object {
+                "fontStyle": "italic",
+              }
+            }
             target="_blank"
           />
         </span>
+      </div>
+    </div>
+    <div
+      className="containerItem3"
+      data-testid="gridContainerItem"
+    >
+      <div
+        className="informationsDiv"
+      >
         <span>
           Branch: 
+          <span
+            className="informations"
+          >
+             
+          </span>
         </span>
+      </div>
+    </div>
+    <div
+      className="containerItem3"
+      data-testid="gridContainerItem"
+    >
+      <div
+        className="informationsDiv"
+      >
         <span>
           Publ.: 
-          28/04/2021
+          <span
+            className="informations"
+          >
+            28/04/2021
+          </span>
         </span>
+      </div>
+    </div>
+    <div
+      className="containerItem3"
+      data-testid="gridContainerItem"
+    >
+      <div
+        className="informationsDiv"
+      >
         <span>
-          Atualização: 
+          Atuali.: 
           28/04/2021
         </span>
       </div>

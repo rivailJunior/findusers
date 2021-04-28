@@ -1,11 +1,8 @@
 @use '../../pages/index.scss' as index;
 @use '../../pages/root.scss' as root;
 .item {
-    background-color: white;
-    border: 0.5px solid #9e9e9e80;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
     border-radius: 5px;
 
     .itemLi {
@@ -13,9 +10,13 @@
         display: grid;
         text-align: left;
         padding: 1%;
-        display: grid;
         grid-template-columns: repeat(12, 1fr);
         max-height: 100px;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border-radius: 4px;
+        opacity: 1;
+        margin-bottom: 3px;
+        max-height: 80px;
 
         .left {
             grid-column: span 2;
@@ -29,36 +30,40 @@
 
             .rightTitle {
                 @include index.default-label(15px, 0, 100%, 700, 20px);
-                // font-size: 1rem;
                 text-transform: capitalize;
                 text-align: left;
             }
             .rightSub {
-                @include index.default-label(15px, 1%, 100%, 300, 20px, left);
+                @include index.default-label(15px, 0px, 100%, 300, 20px, left);
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
+                div {
+                    width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
         }
     }
     .itemLi:hover {
         cursor: pointer;
         background-color: root.$hoverBgc;
-        color: root.$hoverColor;
+        @include index.default-shadow();
     }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+@media only screen and (max-device-width: 320px) and (max-device-width: 480px) {
     .item {
         .itemLi {
-            @include index.default-label(13px, 0, 100%, 500);
-
             grid-template-columns: repeat(12, 1fr);
+            margin-bottom: 3px;
 
             .left {
                 display: none;
             }
+
             .right {
                 grid-column: span 12;
 
@@ -67,16 +72,16 @@
                     text-transform: capitalize;
                 }
                 .rightSub {
-                    @include index.default-label(13px, 1%, 100%, 300, 10px, left);
+                    @include index.default-label(12px, 5px, 100%, 300, 17px, left);
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    overflow: hidden;
                 }
             }
         }
         .itemLi:hover {
             cursor: pointer;
-            background-color: root.$hoverBgc;
             color: root.$hoverColor;
         }
     }
@@ -84,6 +89,37 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+    .item {
+        .itemLi {
+            grid-template-columns: repeat(12, 1fr);
+            margin-bottom: 3px;
+
+            .left {
+                display: none;
+            }
+
+            .right {
+                grid-column: span 12;
+
+                .rightTitle {
+                    @include index.default-label(13px, 1%, 100%, 500, 10px, left);
+                    text-transform: capitalize;
+                }
+                .rightSub {
+                    @include index.default-label(12px, 5px, 100%, 300, 17px, left);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    width: 100%;
+                }
+            }
+        }
+        .itemLi:hover {
+            cursor: pointer;
+            color: root.$hoverColor;
+        }
+    }
 }
 
 /* Desktops and laptops ----------- */

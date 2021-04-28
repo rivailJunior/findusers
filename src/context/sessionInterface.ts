@@ -5,5 +5,6 @@ export interface SessionInterface {
     removeSession: Function,
     user?: User,
     findUser(userName: string): Promise<User | any>,
-    findError?: string
+    findError?: string,
+    setUser
 }

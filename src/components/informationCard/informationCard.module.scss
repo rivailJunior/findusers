@@ -2,11 +2,13 @@
 @use '../../pages/root.scss' as root;
 .card {
     display: inline-block;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 2px #ccc;
+    // border: 1px solid #eee;
+    // box-shadow: 0 2px 2px #ccc;
     width: 100%;
     max-height: 300px;
-    padding: 20px;
+    padding: 5%;
+    background-color: white;
+    @include index.default-shadow();
 
     p {
         @include index.default-label(18px, 0, 100%, 300, 20px, left);

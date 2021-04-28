@@ -126,7 +126,7 @@ describe('Index Repository Page', () => {
         const gridItem = screen.getAllByTestId('gridContainerItem');
         expect(gridContianer).toHaveLength(1)
         fireEvent.click(screen.getByText(/sair/i));
-        expect(gridItem).toHaveLength(6)
+        expect(gridItem).toHaveLength(9)
         expect(screen.queryByText(/language/i)).toBeInTheDocument()
         expect(screen.queryByText(/estrelas/i)).toBeInTheDocument()
         expect(screen.queryByText(/Descrição/i)).toBeInTheDocument()
