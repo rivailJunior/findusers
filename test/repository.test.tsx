@@ -1,5 +1,5 @@
 import React from 'react'
-import { getByTestId, render, screen, act, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import renderer from 'react-test-renderer'
 import '@testing-library/jest-dom/extend-expect'
 import { unmountComponentAtNode } from "react-dom";
@@ -106,20 +106,18 @@ jest.mock('../src/context/useRepositories', () => {
             getRepositoryByName: jest.fn()
         }
     }
-})
-
-jest.mock('')
+});
 
 describe('Index Repository Page', () => {
     test('Render correctly', () => {
-        const container = renderer.create(<Index repository={[]} />)
+        const container = renderer.create(<Index />)
         container.toJSON()
 
         expect(container).toMatchSnapshot()
     })
 
     test('Show all components in page', () => {
-        render(<Index repository={[]} />, container);
+        render(<Index />, container);
         expect(screen.getByText(/sair/i)).toBeInTheDocument();
         expect(screen.getByText(/Descricao usuario/)).toBeInTheDocument();
         expect(screen.getByText(/Rivail Santos/)).toBeInTheDocument();
