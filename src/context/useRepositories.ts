@@ -32,7 +32,6 @@ const useRepositories = (): RepositoriesInterface => {
             setRepository(data)
             return data;
         } catch (err) {
-            console.log('error on get repository', err);
             setError(err);
         } finally {
             setLoading(false);
