@@ -1,306 +1,411 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`List Component Render Correctly 1`] = `
-<div
-  className="item"
-  data-testid="list"
->
+<div>
   <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
+    className="listTitlesInformations"
   >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="stars"
     >
-      <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+      <label
+        htmlFor=""
       >
-        <div>
-          28/04/2021
-        </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
-        </div>
-      </div>
+        Estrelas
+      </label>
+    </div>
+    <div
+      className="description"
+    >
+      <label
+        htmlFor=""
+      >
+        Description
+      </label>
+    </div>
+    <div
+      className="button"
+    >
+      <button
+        className="btnReverse"
+        data-testid="btnReverse"
+        onClick={[Function]}
+      >
+        Sort
+      </button>
     </div>
   </div>
   <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
+    className="item"
+    data-testid="list"
   >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
-  >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
-  >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
-  >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
-  >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
-  >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
-  >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
-  >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div
-    className="itemLi"
-    data-testid="listItem"
-    onClick={[Function]}
-  >
     <div
-      className="left"
-    />
-    <div
-      className="right"
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
     >
       <div
-        className="rightTitle"
-      />
-      <div
-        className="rightSub"
+        className="left"
       >
-        <div>
-          28/04/2021
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
         </div>
-        <div>
-           
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-          />
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="itemLi"
+      data-testid="listItem"
+      onClick={[Function]}
+    >
+      <div
+        className="left"
+      >
+        1
+      </div>
+      <div
+        className="right"
+      >
+        <div
+          className="rightTitle"
+        >
+          moveon
+        </div>
+        <div
+          className="rightSub"
+        >
+          <div>
+            02/06/2016
+          </div>
+          <div>
+             
+            <a
+              href="https://github.com/rivailJunior/moveon.git"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              https://github.com/rivailJunior/moveon.git
+            </a>
+          </div>
         </div>
       </div>
     </div>

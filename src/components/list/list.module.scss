@@ -53,6 +53,42 @@
     }
 }
 
+.listTitlesInformations {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: white;
+    padding: 1%;
+    border-bottom: 1px solid;
+
+    .button {
+        display: flex;
+        justify-content: center;
+        grid-column: span 2;
+    }
+    .description {
+        grid-column: span 8;
+    }
+    .stars {
+        grid-column: span 2;
+    }
+}
+
+.listReverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.btnReverse {
+    background-color: root.$btnBgc;
+    color: white;
+    height: 20px;
+    width: 40px;
+    /* box-shadow: 0px 0px 5px #00000033; */
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (max-device-width: 320px) and (max-device-width: 480px) {
     .item {
@@ -83,6 +119,20 @@
         .itemLi:hover {
             cursor: pointer;
             color: root.$hoverColor;
+        }
+    }
+
+    .listTitlesInformations {
+        padding: 1%;
+
+        .button {
+            grid-column: span 2;
+        }
+        .description {
+            grid-column: span 10;
+        }
+        .stars {
+            display: none;
         }
     }
 }
