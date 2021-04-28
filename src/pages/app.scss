@@ -6,6 +6,11 @@
 
 body {
     font-family: "Roboto", sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: root.$bgc;
+    font-family: root.$fontFamily;
 }
 
 h1 {
@@ -21,6 +26,7 @@ h5 {
 ul > li {
     @include index.default-label(13px, 1%, 80%);
     text-align: left;
+    list-style: decimal;
 }
 
 /* Smartphones (portrait and landscape) ----------- */

@@ -2,13 +2,13 @@
 @use '../../pages/root.scss' as root;
 .card {
     background-color: white;
-    // border: 0.5px solid #9e9e9e80;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    @include index.default-shadow();
 
     .left {
         max-width: 300px;
@@ -21,6 +21,7 @@
         overflow: hidden;
         padding: 2%;
         object-fit: contain;
+
         img {
             object-fit: contain;
             width: 100%;
@@ -31,7 +32,6 @@
 
     .right {
         grid-column: span 8;
-        @include index.default-label(15px, 0, 100%, 300, 20px, left);
         margin-left: 5%;
         padding-top: 2%;
         .title {
@@ -39,7 +39,7 @@
             text-transform: lowercase;
         }
         .subTitle {
-            @include index.default-label(17px, 1%, 100%, 100, 15px, left);
+            @include index.default-label(17px, 1%, 100%, 300, 15px, left);
             display: flex;
             flex-direction: column;
             justify-content: space-between;

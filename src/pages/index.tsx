@@ -11,14 +11,14 @@ const Index = () => {
 
 	return (
 		<div className="container">
-			<h1>Olá Avaliador!</h1>
+			<h2>Olá Avaliador!</h2>
 			<h5>
 				Para realizar algumas requisições precisamos dessa etapa inicial, o
 				FindUser não ficará com nenhum dado seu.
 			</h5>
 			<ul>
 				<li>
-					Ao clicar no botão abaixo, você será será redirecionado ao login com o gitbuh.
+					Ao clicar no botão abaixo, você será será redirecionado ao login com o github.
 				</li>
 				<li>
 					Após login, você será redirecionado a pagina inicial dessa avaliação

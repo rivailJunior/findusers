@@ -21,7 +21,7 @@ const Index = (): JSX.Element => {
     const { user, removeSession } = useSession()
     const { getRepositoryByName, repository } = useRepositories()
     const breadCrumb = breadCrumbTitlesRepository;
-    breadCrumb[0].onClick = () => router.back()
+    breadCrumb[0].onClick = () => router.push('/user')
     const bread404 = bread404Titles;
     useEffect(() => {
         if (router.query?.repository) {

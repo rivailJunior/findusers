@@ -1,36 +1,40 @@
 @use '../../pages/index.scss' as index;
+@use '../../pages/root.scss' as root;
 .inputContainer {
     display: flex;
     flex-direction: row;
 
-    .inputField {
-        height: 50px;
-        @include index.default-label(15px, 0, 100%, 300, 15px, left);
-        border-radius: 5px;
-        // border: none;
-        border: thin solid #bec7d0;
-        border-right: none;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+    input[type="text"] {
+        width: 100%;
+        border: 1px solid #aaa;
+        border-radius: 4px;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+        font-style: italic;
+        font-size: 15;
     }
 
-    .inputField:focus {
-        border: dodgerblue;
-        border-right: none;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
+    input[type="text"]:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+        font-family: root.$fontFamily;
+        font-style: italic;
+        font-size: 15;
     }
 
     button {
-        background-color: dodgerblue;
+        background-color: root.$color;
         color: white;
         border: none;
         border-radius: 5px;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+        height: 32px;
+        cursor: pointer;
     }
 
     .disabled {
         background-color: #bec7d0;
+        height: 32px;
     }
 }

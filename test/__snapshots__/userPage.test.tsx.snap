@@ -28,7 +28,7 @@ exports[`Index User Page Render correctly 1`] = `
           data-testid="labelBread"
           onClick={[Function]}
         >
-          Descrição usuário/
+          Descrição usuário
         </div>
       </div>
     </div>

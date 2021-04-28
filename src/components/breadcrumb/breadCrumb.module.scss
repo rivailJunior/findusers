@@ -3,19 +3,23 @@
 .breadContainer {
     display: flex;
     flex-direction: row;
+    background-color: white;
+    padding: 1%;
 
     .bLabel {
-        @include index.default-label(18px, 2%, none, 100, 30px, left);
-        text-decoration: underline;
+        @include index.default-label(13px, 2%, none, 300, 1, left);
         color: root.$color;
         margin: 1px;
-        margin-right: 5px;
+        margin-right: 10px;
         color: root.$color;
         cursor: pointer;
+        display: list-item;
+        list-style-type: disc;
+        list-style-position: inside;
     }
 
     .active {
-        color: blue;
+        color: root.$btnBgc;
     }
 }
 

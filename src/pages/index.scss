@@ -19,20 +19,25 @@
     line-height: $lineHeight;
 }
 
+@mixin default-shadow() {
+    box-shadow: 0px 0px 5px #00000033;
+    border-radius: 4px;
+}
+
 .container {
     margin: 5% auto;
     padding: 2%;
     width: 30%;
     height: 50%;
-    background-color: #fff;
-    border-radius: 5px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
-    border: 1px solid;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 1;
+    @include default-shadow;
 }
 
 .btn {
@@ -52,11 +57,12 @@
     line-height: 25px;
     cursor: pointer;
     text-decoration: none;
+    @include default-shadow();
 }
 
 .container .btn:hover,
 .container .btn:active {
-    border: 2px solid #3498db;
+    // border: 2px solid #3498db;
     background-color: white;
     color: #3498db;
 }
