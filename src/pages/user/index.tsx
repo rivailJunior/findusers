@@ -21,14 +21,6 @@ const Index = ({ userData, token }): JSX.Element => {
 	const { findRepositories, repositories } = useRepositories();
 
 	useEffect(() => {
-		//here will find after login
-		if (userData) {
-			findRepositories(userData?.login)
-		}
-	}, [])
-
-	useEffect(() => {
-		// here will change when search a new user
 		if (user) {
 			findRepositories(user?.login)
 		}
