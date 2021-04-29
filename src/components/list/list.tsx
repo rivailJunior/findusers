@@ -24,7 +24,9 @@ const ListRepositories = ({ data, handleClick }: iList): JSX.Element => {
                     <label htmlFor="">Description</label>
                 </div>
                 <div className={styles.button}>
-                    <button data-testid="btnReverse" className={styles.btnReverse} onClick={() => setShowReverse(!showReverse)}>Sort</button>
+                    <div data-testid="btnReverse" className={styles.btnReverse} onClick={() => setShowReverse(!showReverse)}>
+                        <img src="/sort.png" alt="Sort list" />
+                    </div>
                 </div>
             </div>
 

@@ -26,13 +26,16 @@ exports[`List Component Render Correctly 1`] = `
     <div
       className="button"
     >
-      <button
+      <div
         className="btnReverse"
         data-testid="btnReverse"
         onClick={[Function]}
       >
-        Sort
-      </button>
+        <img
+          alt="Sort list"
+          src="/sort.png"
+        />
+      </div>
     </div>
   </div>
   <div

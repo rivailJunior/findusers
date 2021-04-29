@@ -53,8 +53,9 @@
         width: 40px;
         @include index.default-shadow();
     }
-    .active:hover {
+    a.active:hover {
         cursor: pointer;
+        @include index.default-shadow();
     }
 }
 
